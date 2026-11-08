@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Creation trail",
+    "description": "Adds a by-time switch to the workspace files page header: it turns the tree into a timeline that orders files by when they were made, labels each with its creation time and conversation, and opens either one on click."
+  }
+}

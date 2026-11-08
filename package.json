@@ -1,0 +1,48 @@
+{
+  "name": "@local/creation-timeline",
+  "version": "1.0.1",
+  "type": "module",
+  "license": "MIT",
+  "description": "A by-time switch for the right-sidebar files page: every workspace file in the order it was created, with its type icon, creation time and the conversation behind it.",
+  "keywords": [
+    "dsh-plugin",
+    "deepseek-harness",
+    "sidebar",
+    "files",
+    "timeline"
+  ],
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg",
+    "LICENSE",
+    "README.md",
+    "AGENTS.md",
+    "CLAUDE.md"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-sidebar-right",
+        "@deepseek-ai/dsh-client-ui-workspace"
+      ]
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fengtianyang523/dsh-creation-timeline.git"
+  }
+}
